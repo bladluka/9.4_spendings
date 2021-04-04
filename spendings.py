@@ -34,6 +34,7 @@ def update_spending(spending_id):
         return redirect(url_for("spendings_list"))
     return render_template("spending.html", form=form, spending_id=spending_id)
 
+
 @app.route('/spendings/delete/<int:spending_id>/', methods=["GET"])
 def delete_spending(spending_id):
     form = SpendingsForm()
